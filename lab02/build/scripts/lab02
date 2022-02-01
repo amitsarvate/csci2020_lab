@@ -201,7 +201,7 @@ fi
 
 set -- \
         -classpath "$CLASSPATH" \
-        csci2020u.lab02.SimpleTest \
+        csci2020u.lab02.CSVDemo \
         "$@"
 
 # Use "xargs" to parse quoted args.
