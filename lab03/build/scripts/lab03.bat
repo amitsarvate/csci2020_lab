@@ -17,7 +17,7 @@
 @if "%DEBUG%" == "" @echo off
 @rem ##########################################################################
 @rem
-@rem  lab02 startup script for Windows
+@rem  lab03 startup script for Windows
 @rem
 @rem ##########################################################################
 
@@ -32,7 +32,7 @@ set APP_HOME=%DIRNAME%..
 @rem Resolve any "." and ".." in APP_HOME to make it shorter.
 for %%i in ("%APP_HOME%") do set APP_HOME=%%~fi
 
-@rem Add default JVM options here. You can also use JAVA_OPTS and LAB02_OPTS to pass JVM options to this script.
+@rem Add default JVM options here. You can also use JAVA_OPTS and LAB03_OPTS to pass JVM options to this script.
 set DEFAULT_JVM_OPTS=
 
 @rem Find java.exe
@@ -67,20 +67,20 @@ goto fail
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\lab02.jar;%APP_HOME%\lib\commons-csv-1.8.jar
+set CLASSPATH=%APP_HOME%\lib\lab03-1.0.jar;%APP_HOME%\lib\commons-csv-1.8.jar
 
 
-@rem Execute lab02
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %LAB02_OPTS%  -classpath "%CLASSPATH%" csci2020u.lab02.CSVDemo %*
+@rem Execute lab03
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %LAB03_OPTS%  -classpath "%CLASSPATH%" csci2020u.lab02.CSVDemo %*
 
 :end
 @rem End local scope for the variables with windows NT shell
 if "%ERRORLEVEL%"=="0" goto mainEnd
 
 :fail
-rem Set variable LAB02_EXIT_CONSOLE if you need the _script_ return code instead of
+rem Set variable LAB03_EXIT_CONSOLE if you need the _script_ return code instead of
 rem the _cmd.exe /c_ return code!
-if  not "" == "%LAB02_EXIT_CONSOLE%" exit 1
+if  not "" == "%LAB03_EXIT_CONSOLE%" exit 1
 exit /b 1
 
 :mainEnd
