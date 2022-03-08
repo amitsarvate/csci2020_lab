@@ -23,7 +23,7 @@ public class HelloApplication extends Application {
         // Student ID Column
         TableColumn<StudentRecord, String> idCol = new TableColumn<>("Student ID");
         idCol.setMinWidth(200);
-        idCol.setCellValueFactory(new PropertyValueFactory<>("Student ID"));
+        idCol.setCellValueFactory(new PropertyValueFactory<>("StudentID"));
 
         // Midterm Column
         TableColumn<StudentRecord, Float> midtermCol = new TableColumn<>("Midterm");
@@ -38,17 +38,17 @@ public class HelloApplication extends Application {
         // Exam Column
         TableColumn<StudentRecord, Float> examCol = new TableColumn<>("Final Exam");
         examCol.setMinWidth(100);
-        examCol.setCellValueFactory(new PropertyValueFactory<>("Final Exam"));
+        examCol.setCellValueFactory(new PropertyValueFactory<>("Exam"));
 
         // Final Mark Column
         TableColumn<StudentRecord, Float> finalMarkCol = new TableColumn<>("Final Mark");
-        examCol.setMinWidth(100);
-        examCol.setCellValueFactory(new PropertyValueFactory<>("Final Mark"));
+        finalMarkCol.setMinWidth(100);
+        finalMarkCol.setCellValueFactory(new PropertyValueFactory<>("FinalMark"));
 
         // Letter Grade Column
-        TableColumn<StudentRecord, Float> letterGradeCol = new TableColumn<>("Letter Grade");
-        examCol.setMinWidth(100);
-        examCol.setCellValueFactory(new PropertyValueFactory<>("Letter Grade"));
+        TableColumn<StudentRecord, String> letterGradeCol = new TableColumn<>("Letter Grade");
+        letterGradeCol.setMinWidth(100);
+        letterGradeCol.setCellValueFactory(new PropertyValueFactory<>("LetterGrade"));
 
 
         table = new TableView<>();

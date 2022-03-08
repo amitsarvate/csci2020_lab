@@ -7,7 +7,7 @@ public class StudentRecord {
     private float assignment;
     private float exam;
     private float finalMark;
-    private char letterGrade;
+    private String letterGrade;
 
     public StudentRecord(String studentID, float midterm, float assignment, float exam) {
         this.studentID = studentID;
@@ -23,17 +23,19 @@ public class StudentRecord {
         return this.finalMark;
     }
 
-    public char getLetterGrade() {
-        if (this.finalMark >= 80 || this.finalMark <= 100) {
-            this.letterGrade = 'A';
-        } else if (this.finalMark >= 70 || this.finalMark <= 79) {
-            this.letterGrade = 'B';
-        } else if (this.finalMark >= 60 || this.finalMark <= 69) {
-            this.letterGrade = 'C';
-        } else if (this.finalMark >= 50 || this.finalMark <= 59) {
-            this.letterGrade = 'D';
-        } else if (this.finalMark >= 0 || this.finalMark <= 49) {
-            this.letterGrade = 'F';
+    public String getLetterGrade() {
+
+        float finalMark = getFinalMark();
+        if (finalMark >= 80 && finalMark <= 100) {
+            this.letterGrade = "A";
+        } else if (finalMark >= 70 && finalMark <= 79) {
+            this.letterGrade = "B";
+        } else if (finalMark >= 60 && finalMark <= 69) {
+            this.letterGrade = "C";
+        } else if (finalMark >= 50 && finalMark <= 59) {
+            this.letterGrade = "D";
+        } else if (finalMark >= 0 && finalMark <= 49) {
+            this.letterGrade = "F";
         }
 
         return this.letterGrade;
@@ -69,6 +71,14 @@ public class StudentRecord {
 
     public void setExam(float exam) {
         this.exam = exam;
+    }
+
+    public void setFinalMark(float finalMark) {
+        this.finalMark = finalMark;
+    }
+
+    public void setLetterGrade(String letterGrade) {
+        this.letterGrade = letterGrade;
     }
 
 }
