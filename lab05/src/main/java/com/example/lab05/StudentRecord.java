@@ -16,11 +16,10 @@ public class StudentRecord {
         this.exam = exam;
         this.finalMark = getFinalMark();
         this.letterGrade = getLetterGrade();
-
     }
 
     public float getFinalMark() {
-        this.finalMark = (this.midterm * 0.2f) + (this.assignment * 0.2f) + (this.exam * 0.3f);
+        this.finalMark = (this.midterm * 0.2f) + (this.assignment * 0.3f) + (this.exam * 0.5f);
         return this.finalMark;
     }
 
@@ -38,7 +37,38 @@ public class StudentRecord {
         }
 
         return this.letterGrade;
+    }
 
+    public String getStudentID() {
+        return this.studentID;
+    }
+
+    public float getMidterm() {
+        return this.midterm;
+    }
+
+    public float getAssignment() {
+        return this.assignment;
+    }
+
+    public float getExam() {
+        return this.exam;
+    }
+
+    public void setStudentID(String studentID) {
+        this.studentID = studentID;
+    }
+
+    public void setMidterm(float midterm) {
+        this.midterm = midterm;
+    }
+
+    public void setAssignment(float assignment) {
+        this.assignment = assignment;
+    }
+
+    public void setExam(float exam) {
+        this.exam = exam;
     }
 
 }
