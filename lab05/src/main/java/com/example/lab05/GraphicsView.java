@@ -13,9 +13,12 @@ import java.io.IOException;
 
 public class GraphicsView {
 
+
+
     @FXML
     private Button backtomainbtn;
 
+    // when the button is pressed the main menu scene will be shown
     @FXML
     void backtomain(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("hello-view.fxml"));

@@ -18,6 +18,8 @@ import java.util.ResourceBundle;
 
 public class AboutView implements Initializable {
 
+
+    // components of the AboutView
     @FXML
     private Button backtomainbtn;
 
@@ -31,7 +33,7 @@ public class AboutView implements Initializable {
     private Text studentname;
 
 
-
+    // when the button is pressed the main menu scene will be shown
     @FXML
     void backtomain(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("hello-view.fxml"));

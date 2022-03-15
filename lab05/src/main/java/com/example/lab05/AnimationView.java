@@ -19,12 +19,14 @@ import java.util.ResourceBundle;
 
 public class AnimationView implements Initializable {
 
+
     @FXML
     private Button backtomainbtn;
 
     @FXML
     private Circle shape;
 
+    // when the button is pressed the main menu scene will be shown
     @FXML
     void backtomain(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("hello-view.fxml"));

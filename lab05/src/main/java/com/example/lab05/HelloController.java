@@ -22,6 +22,7 @@ public class HelloController {
     @FXML
     private Button graphicsbtn;
 
+    // when clicked shows the about scene
     @FXML
     void aboutload(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("about-view.fxml"));
@@ -31,6 +32,7 @@ public class HelloController {
         stage.show();
     }
 
+    // when click shows the animation scene
     @FXML
     void animationload(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("animation-view.fxml"));
@@ -42,6 +44,7 @@ public class HelloController {
 
     }
 
+    // when clicked shows the graphics scene
     @FXML
     void graphicsload(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("graphics-view.fxml"));
@@ -49,7 +52,6 @@ public class HelloController {
         Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
-
 
     }
 
