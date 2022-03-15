@@ -2,9 +2,13 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab05.AboutView">
    <children>
       <Button fx:id="backtomainbtn" layoutX="255.0" layoutY="45.0" mnemonicParsing="false" onAction="#backtomain" text="Back To Main" />
+      <Text fx:id="studentname" layoutX="222.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="165.0" />
+      <Text fx:id="email" layoutX="201.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="206.0" />
+      <Text fx:id="soft_desc" layoutX="210.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="180.955078125" />
    </children>
 </AnchorPane>
