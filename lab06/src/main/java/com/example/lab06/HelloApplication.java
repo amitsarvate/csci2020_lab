@@ -7,6 +7,7 @@ import javafx.collections.ObservableList;
 import javafx.geometry.Side;
 import javafx.scene.Scene;
 import javafx.scene.chart.*;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.scene.layout.StackPane;
@@ -84,10 +85,16 @@ public class HelloApplication extends Application {
         pieChart.setLabelsVisible(true);
         pieChart.setStartAngle(180);
 
+        // shifting the piechart to the right a bit to not overlap the barchart
+        pieChart.setLayoutX(600);
 
-        StackPane pane = new StackPane(barChart);
-        Scene scene = new Scene(pane, 600, 400);
-        stage.setTitle("Bar Chart");
+        StackPane rootPane = new StackPane();
+
+        Scene scene = new Scene(rootPane, 1200, 400);
+        Pane pane1 = new Pane(barChart);
+        Pane pane2 = new Pane(pieChart);
+        rootPane.getChildren().addAll(pane1, pane2);
+        stage.setTitle("Charts For Lab 06");
         stage.setScene(scene);
         stage.show();
 
