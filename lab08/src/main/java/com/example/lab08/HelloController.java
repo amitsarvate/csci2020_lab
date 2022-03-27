@@ -111,10 +111,12 @@ public class HelloController implements Initializable {
         float midtermGrade = Float.parseFloat(midinput.getText());
         float examGrade = Float.parseFloat(exminput.getText());
 
+        // adding record into the observable list
         addRecord(SID, assignmentGrade, midtermGrade, examGrade);
 
         table.setItems(studentRecordData);
 
+        // resetting the fields
         stuidinput.setText("");
         assigninput.setText("");
         midinput.setText("");
@@ -123,9 +125,12 @@ public class HelloController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        // initial file name
         CURRENTFILENAME = "/Users/amit.sar21/University/Second Year/Semester 2 /Systems Development and Integration - CSCI 2020/labs/lab08/src/studentRecordOutput.csv";
         studentRecordData = FXCollections.observableArrayList();
 
+        // setting up the columns of the table view
         stucol.setCellValueFactory(new PropertyValueFactory<>("StudentID"));
         midcol.setCellValueFactory(new PropertyValueFactory<>("Midterm"));
         assigncol.setCellValueFactory(new PropertyValueFactory<>("Assignment"));
@@ -173,6 +178,7 @@ public class HelloController implements Initializable {
 
     }
 
+    // exit function
     public void exitOptionClicked(ActionEvent event) {
         System.exit(0);
     }
