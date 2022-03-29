@@ -191,7 +191,7 @@ public class HelloController implements Initializable {
             csvWriter = new BufferedWriter((new FileWriter(file)));
 
             for (StudentRecord student : studentRecordData) {
-                String line = student.getStudentID() + "," + student.getAssignment() + "," + student.getMidterm() + "," + student.getFinalMark() + "\n";
+                String line = student.getStudentID() + "," + student.getAssignment() + "," + student.getMidterm() + "," + student.getExam() + "\n";
                 csvWriter.write(line);
 
             }
